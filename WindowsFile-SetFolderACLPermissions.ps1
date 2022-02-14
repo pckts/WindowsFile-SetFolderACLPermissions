@@ -5,7 +5,7 @@
 # Set-ACLPermissions WORKGROUP\packet FullControl Allow D:\Dev\Projects Code
 # This example gives the user WORKGROUP\packet the FullControl permissions on all folders called "Code" within the D:\Dev\Projects folder and all subfolders
 
-#Note: This has not been tested and may contain errors and incorrectly assumed variable types
+#Note: This has not been tested and may contain errors and incorrectly assumptions
 
 function Set-FolderACLPermissions([int]$SecurityPrincipal, [int]$PermissionType, [int]$PermissionState, [int]$SearchDir, [int]$SearchTarget) 
 {
