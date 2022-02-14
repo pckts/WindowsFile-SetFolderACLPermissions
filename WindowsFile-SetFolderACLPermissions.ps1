@@ -7,7 +7,7 @@
 
 #Note: This has not been tested and may contain errors and incorrect assumptions
 
-function Set-FolderACLPermissions([int]$SecurityPrincipal, [int]$PermissionType, [int]$PermissionState, [int]$SearchDir, [int]$SearchTarget) 
+function Set-FolderACLPermissions([string]$SecurityPrincipal, [string]$PermissionType, [string]$PermissionState, [string]$SearchDir, [string]$SearchTarget) 
 {
     $PermissionScope = New-Object System.Security.AccessControl.FileSystemAccessRule($SecurityPrincipal,$PermissionType,'ContainerInherit,ObjectInherit','None',$PermissionState)
     $TargetFolders = Get-ChildItem -Directory -Path '\\?\'+$SearchDir -Recurse -Filter $SearchTarget | select-object FullName
